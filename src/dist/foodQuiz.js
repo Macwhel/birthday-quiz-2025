@@ -3,162 +3,154 @@ const quizData = {
     foodPersonalities: {
         onigiri: {
             name: "Onigiri",
-            description: "You're simple but satisfying! People find comfort in your reliable nature. You're adaptable and can fit into any situation, bringing a sense of home wherever you go.",
+            description: "Comforting and reliable on the surface, but with surprising depth! You might seem simple at first, but there's much more to you than meets the eye. Practical and unpretentious, you find value in the little things.",
             image: "images/onigiri.png"
         },
         sukiyaki: {
             name: "Sukiyaki",
-            description: "Warm, social, and bringing people together! You create harmony in groups and know how to make everyone feel included. Your rich personality has many layers that keep people coming back.",
+            description: "Bold and social, with a warm and inviting presence! You bring people together and aren't afraid to make a statement. Your vibrant personality can be intense, and while you might come with a bit of complexity, you're always worth the investment.",
             image: "images/sukiyaki.png"
         },
         bokChoy: {
             name: "Bok Choy",
-            description: "Fresh and crisp! You're straightforward, honest, and bring a refreshing perspective to any situation. You stand strong in your values while remaining flexible when needed.",
+            description: "The ultimate supportive friend! Always there for others, forgiving, and incredibly adaptable. You get along with everyone and can fit into any situation with grace and ease. Your flexibility is your greatest strength.",
             image: "images/bokchoy.png"
         },
         napaCabbage: {
             name: "Napa Cabbage",
-            description: "Versatile and nurturing! You adapt well to different situations while maintaining your unique character. You provide support to those around you and have hidden depths.",
+            description: "Quietly introspective with hidden depths! You might blend into the background, but those who take the time to know you discover a rich, complex personality. Slightly awkward but independently minded, you can also shine in social settings when you choose to.",
             image: "images/napacabbage.png"
         },
         tonkatsu: {
             name: "Tonkatsu",
-            description: "Crispy on the outside, tender on the inside! While you may seem tough at first, you're actually quite sensitive. You appreciate tradition and bring comfort to those close to you.",
+            description: "Bold and unapologetic! You make a big impression and aren't afraid to stand out. Popular but polarizing, you have a strong presence that can be overwhelming to some but magnetic to others. You're not afraid of being a bit extra.",
             image: "images/tonkatsu.png"
         },
         noodleSoup: {
             name: "Noodle Soup",
-            description: "Comforting and complex! You have many elements to your personality that work together beautifully. People seek you out when they need warming up or cheering up.",
+            description: "The ultimate comforter with a varied personality! Soothing and empathetic, you're the go-to person for support and warmth. Reliable and comforting, you have many layers that help others feel understood and cared for.",
             image: "images/noodlesoup.png"
         },
         frenchFries: {
             name: "French Fries",
-            description: "Universally loved! You're social, fun, and always the life of the party. You know how to make people smile and bring a golden energy to any gathering.",
+            description: "Pure, reliable, and universally appealing! Simple yet satisfying, you're the friend everyone loves. Popular and straightforward, you bring joy and comfort in the most uncomplicated way possible.",
             image: "images/frenchfries.png"
         }
     },
     questions: [
         {
-            question: "It's your day off. How do you spend it?",
-            image: "images/day_off.png",
+            question: "You're in a project group and one person is being annoying and rude to someone else. Do you",
             choices: [
-                { text: "Relaxing at home with a good book or show", scores: { onigiri: 2, napaCabbage: 1, noodleSoup: 1 } },
-                { text: "Inviting friends over for a gathering", scores: { sukiyaki: 2, tonkatsu: 1, frenchFries: 2 } },
-                { text: "Going on an adventure or trying something new", scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 } },
-                { text: "Taking care of errands and organizing your space", scores: { napaCabbage: 2, onigiri: 1, bokChoy: 1 } }
+                { text: "Tell them to stop", scores: { bokChoy: 2, noodleSoup: 1, napaCabbage: 1 } },
+                { text: "Be passive aggressive towards them", scores: { tonkatsu: 1, frenchFries: 1 } },
+                { text: "Don't do anything and rant about them later to your friends", scores: { sukiyaki: 1, frenchFries: 1 } },
+                { text: "Tell yourself that it's okay", scores: { onigiri: 2, noodleSoup: 1 } }
             ]
         },
         {
-            question: "How would your friends describe you?",
-            image: "images/friends_describe.png",
+            question: "You walk into a store in order to look around, but you can't find something. Do you",
             choices: [
-                { text: "Reliable and comforting", scores: { onigiri: 2, noodleSoup: 2, napaCabbage: 1 } },
-                { text: "Energetic and fun-loving", scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 } },
-                { text: "Thoughtful and deep", scores: { tonkatsu: 2, noodleSoup: 1, napaCabbage: 1 } },
-                { text: "Adaptable and easygoing", scores: { onigiri: 1, bokChoy: 2, frenchFries: 1 } }
+                { text: "Ask an employee for help", scores: { sukiyaki: 2, frenchFries: 1 } },
+                { text: "Look for it yourself", scores: { napaCabbage: 2, onigiri: 1, tonkatsu: 1 } }
             ]
         },
         {
-            question: "When faced with a problem, you usually:",
-            image: "images/problem_solving.png",
+            question: "You're looking at blind boxes, and an employee begins talking to you. Do you",
             choices: [
-                { text: "Break it down into manageable steps", scores: { napaCabbage: 2, bokChoy: 1, onigiri: 1 } },
-                { text: "Talk it through with friends", scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 } },
-                { text: "Trust your instincts and dive in", scores: { frenchFries: 2, tonkatsu: 1, bokChoy: 1 } },
-                { text: "Take time to reflect before deciding", scores: { onigiri: 2, tonkatsu: 2, noodleSoup: 1 } }
+                { text: "Chat with them", scores: { sukiyaki: 2, frenchFries: 2 } },
+                { text: "Shut down the conversation and continue looking", scores: { tonkatsu: 2, onigiri: 1 } },
+                { text: "Shut down the conversation and discreetly leave", scores: { napaCabbage: 2, bokChoy: 1 } },
+                { text: "Walk to a separate part of the store", scores: { noodleSoup: 2, onigiri: 1 } }
             ]
         },
         {
-            question: "What's your ideal weekend activity?",
-            image: "images/weekend_activity.png",
+            question: "At a restaurant, what would you most like to order out of these?",
             choices: [
-                { text: "Cooking a special meal", scores: { sukiyaki: 2, tonkatsu: 1, noodleSoup: 2 } },
-                { text: "Going out with friends", scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 } },
-                { text: "Spending time in nature", scores: { bokChoy: 2, napaCabbage: 2, onigiri: 1 } },
-                { text: "Watching movies or playing games at home", scores: { onigiri: 2, tonkatsu: 1, noodleSoup: 1 } }
+                { text: "Vegetable Napoleon", scores: { bokChoy: 2, napaCabbage: 1 } },
+                { text: "Pizza", scores: { frenchFries: 2, sukiyaki: 1 } },
+                { text: "Grilled Chicken", scores: { tonkatsu: 2, onigiri: 1 } },
+                { text: "Curry udon", scores: { noodleSoup: 2, sukiyaki: 1 } },
+                { text: "Scallops", scores: { napaCabbage: 2, tonkatsu: 1 } },
+                { text: "Fried rice", scores: { sukiyaki: 2, frenchFries: 1 } }
             ]
         },
         {
-            question: "How do you recharge when you're feeling drained?",
-            image: "images/recharge.png",
+            question: "What do you want to do on the weekend",
             choices: [
-                { text: "Alone time and self-care", scores: { onigiri: 2, napaCabbage: 1, tonkatsu: 1 } },
-                { text: "Comfort food and a cozy atmosphere", scores: { noodleSoup: 2, sukiyaki: 1, frenchFries: 1 } },
-                { text: "Light exercise or outdoor activity", scores: { bokChoy: 2, napaCabbage: 1, frenchFries: 1 } },
-                { text: "Socializing with close friends", scores: { sukiyaki: 2, frenchFries: 2, tonkatsu: 1 } }
+                { text: "Go out and party!", scores: { frenchFries: 2, sukiyaki: 1 } },
+                { text: "Treat yourself to a good meal", scores: { tonkatsu: 2, noodleSoup: 1 } },
+                { text: "Hang out with some friends", scores: { sukiyaki: 2, bokChoy: 1 } },
+                { text: "Stay at home and recharge", scores: { onigiri: 2, noodleSoup: 1 } },
+                { text: "Run errands and get a head start on the week", scores: { napaCabbage: 2, bokChoy: 1 } }
             ]
         },
         {
-            question: "What's your approach to trying new things?",
-            image: "images/trying_new_things.png",
+            question: "For your friends, are you most known as",
             choices: [
-                { text: "Cautious but open-minded", scores: { onigiri: 2, napaCabbage: 1, tonkatsu: 2 } },
-                { text: "Enthusiastic and all-in", scores: { frenchFries: 2, bokChoy: 2, sukiyaki: 1 } },
-                { text: "Depends on who I'm with", scores: { sukiyaki: 2, noodleSoup: 1, napaCabbage: 1 } },
-                { text: "I like to research thoroughly first", scores: { napaCabbage: 2, bokChoy: 1, noodleSoup: 1 } }
+                { text: "The outgoing one", scores: { frenchFries: 2, sukiyaki: 1 } },
+                { text: "The supportive and empathetic one", scores: { noodleSoup: 2, bokChoy: 1 } },
+                { text: "The invisible one", scores: { napaCabbage: 2, onigiri: 1 } },
+                { text: "The innocent one", scores: { onigiri: 2, noodleSoup: 1 } }
             ]
         },
         {
-            question: "In a group project, you typically:",
-            image: "images/group_project.png",
+            question: "Your top love language",
             choices: [
-                { text: "Take the lead and organize everyone", scores: { tonkatsu: 2, bokChoy: 1, sukiyaki: 1 } },
-                { text: "Support others and help where needed", scores: { noodleSoup: 2, napaCabbage: 2, onigiri: 1 } },
-                { text: "Bring creative ideas to the table", scores: { frenchFries: 2, bokChoy: 2, sukiyaki: 1 } },
-                { text: "Make sure everything gets done correctly", scores: { onigiri: 2, napaCabbage: 1, tonkatsu: 1 } }
+                { text: "Words of Affirmation", scores: { sukiyaki: 2, noodleSoup: 1 } },
+                { text: "Quality Time", scores: { frenchFries: 2, bokChoy: 1 } },
+                { text: "Acts of Service", scores: { napaCabbage: 2, onigiri: 1 } },
+                { text: "Receiving Gifts", scores: { tonkatsu: 2, frenchFries: 1 } },
+                { text: "Physical Touch", scores: { sukiyaki: 2, noodleSoup: 1 } }
             ]
         },
         {
-            question: "What's your ideal weather?",
-            image: "images/weather.png",
+            question: "What's your favorite part of food?",
             choices: [
-                { text: "Warm and sunny", scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 } },
-                { text: "Cool and crisp", scores: { onigiri: 2, napaCabbage: 2, bokChoy: 1 } },
-                { text: "Cozy rainy day", scores: { noodleSoup: 2, tonkatsu: 1, sukiyaki: 1 } },
-                { text: "Snowy winter wonderland", scores: { tonkatsu: 2, noodleSoup: 1, napaCabbage: 1 } }
+                { text: "Bold flavors", scores: { tonkatsu: 2, sukiyaki: 1 } },
+                { text: "Aftertaste", scores: { noodleSoup: 2, napaCabbage: 1 } },
+                { text: "Interesting textures", scores: { bokChoy: 2, onigiri: 1 } },
+                { text: "Appearances", scores: { frenchFries: 2, tonkatsu: 1 } },
+                { text: "Complex flavors", scores: { sukiyaki: 2, noodleSoup: 1 } }
             ]
         },
         {
-            question: "How do you handle unexpected changes?",
-            image: "images/unexpected_changes.png",
+            question: "In a group project, are you usually the",
             choices: [
-                { text: "Go with the flow - change is exciting!", scores: { frenchFries: 2, bokChoy: 2, sukiyaki: 1 } },
-                { text: "Adapt after taking a moment to process", scores: { onigiri: 2, napaCabbage: 1, noodleSoup: 1 } },
-                { text: "Look for ways to make the best of it with others", scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 } },
-                { text: "Try to find a way back to the original plan", scores: { tonkatsu: 2, onigiri: 1, napaCabbage: 1 } }
+                { text: "Team carry", scores: { tonkatsu: 2, sukiyaki: 1 } },
+                { text: "Slacker", scores: { napaCabbage: 1, frenchFries: 1 } },
+                { text: "Non communicator but pumps out work", scores: { onigiri: 2, noodleSoup: 1 } },
+                { text: "Organizer/Leader", scores: { bokChoy: 2, napaCabbage: 1 } }
             ]
         },
         {
-            question: "What do you value most in relationships?",
-            image: "images/relationships.png",
+            question: "Favorite exercise",
             choices: [
-                { text: "Loyalty and reliability", scores: { onigiri: 2, tonkatsu: 2, napaCabbage: 1 } },
-                { text: "Fun and excitement", scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 } },
-                { text: "Deep conversations and understanding", scores: { noodleSoup: 2, tonkatsu: 1, napaCabbage: 2 } },
-                { text: "Growth and new experiences together", scores: { bokChoy: 2, sukiyaki: 2, frenchFries: 1 } }
+                { text: "Walking", scores: { onigiri: 2, napaCabbage: 1 } },
+                { text: "Running", scores: { bokChoy: 2, frenchFries: 1 } },
+                { text: "Lifting", scores: { tonkatsu: 2, sukiyaki: 1 } },
+                { text: "Gymming", scores: { frenchFries: 2, sukiyaki: 1 } },
+                { text: "Biking", scores: { noodleSoup: 2, bokChoy: 1 } },
+                { text: "Uhhhh sleep?", scores: { noodleSoup: 2, onigiri: 1 } }
             ]
         },
         {
-            question: "At a food market with many options, you're drawn to:",
-            image: "images/food_market.png",
+            question: "How many stuffed animals do you have",
             choices: [
-                { text: "Classic comfort foods that remind you of home", scores: { onigiri: 2, noodleSoup: 2, tonkatsu: 1 } },
-                { text: "Exotic dishes you've never tried before", scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 } },
-                { text: "Shareable platters to enjoy with friends", scores: { sukiyaki: 2, frenchFries: 2, napaCabbage: 1 } },
-                { text: "Carefully crafted artisanal foods", scores: { tonkatsu: 2, napaCabbage: 1, noodleSoup: 1 } }
+                { text: "None", scores: { tonkatsu: 2, frenchFries: 1 } },
+                { text: "There's a few", scores: { onigiri: 2, napaCabbage: 1 } },
+                { text: "There's several", scores: { noodleSoup: 2, sukiyaki: 1 } },
+                { text: "Bout a dozen", scores: { bokChoy: 2, onigiri: 1 } },
+                { text: "A lot…", scores: { sukiyaki: 2, noodleSoup: 1 } }
             ]
         },
         {
-            question: "If you were a meal, you'd want to be one that:",
-            image: "images/meal_choices.png",
+            question: "Quick! Don't think. Just pick your favorite:",
             choices: [
-                { text: "Brings comfort and feels like home", scores: { onigiri: 3, noodleSoup: 2, napaCabbage: 1 } },
-                { text: "Brings people together to share and connect", scores: { sukiyaki: 3, frenchFries: 1, noodleSoup: 1 } },
-                { text: "Is bold, exciting and full of flavor", scores: { bokChoy: 3, frenchFries: 2, tonkatsu: 1 } },
-                { text: "Is thoughtfully crafted with care", scores: { tonkatsu: 3, napaCabbage: 2, onigiri: 1 } },
-                { text: "Is versatile and adaptable", scores: { napaCabbage: 3, onigiri: 1, bokChoy: 1 } },
-                { text: "Makes everyone happy and lifts the mood", scores: { frenchFries: 3, sukiyaki: 1, bokChoy: 1 } },
-                { text: "Has depth and complexity", scores: { noodleSoup: 3, tonkatsu: 1, sukiyaki: 1 } }
+                { text: "Sleeping", scores: { noodleSoup: 2, onigiri: 1 } },
+                { text: "Vegetables", scores: { bokChoy: 2, napaCabbage: 1 } },
+                { text: "Money", scores: { tonkatsu: 2, frenchFries: 1 } },
+                { text: "Socializing", scores: { sukiyaki: 2, frenchFries: 1 } },
+                { text: "Alone time", scores: { onigiri: 2, napaCabbage: 1 } }
             ]
         }
     ]
