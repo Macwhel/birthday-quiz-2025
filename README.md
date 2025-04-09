@@ -4,7 +4,7 @@ A fun quiz to discover which food matches your personality!
 
 ## Try It Out
 
-You can take the quiz here: [https://YOUR-USERNAME.github.io/REPO-NAME](https://YOUR-USERNAME.github.io/REPO-NAME)
+You can take the quiz here: [https://macwhelE.github.io/birthday-quiz-2025](https://macwhelE.github.io/birthday-quiz-2025)
 
 ## About
 
@@ -22,14 +22,14 @@ This food personality quiz features 10 questions to determine which food you are
 
 ### Changing the Food Types
 
-Edit the `foodPersonalities` object in `js/foodQuiz.ts`. Each food has:
+Edit the `foodPersonalities` object in `src/foodQuiz.ts`. Each food has:
 - Name (displayed in results)
 - Description (personality traits)
 - Image path
 
 ### Modifying Questions
 
-Edit the `questions` array in `js/foodQuiz.ts`. Each question has:
+Edit the `questions` array in `src/foodQuiz.ts`. Each question has:
 - A question text
 - Four choices with text and corresponding scores
 
