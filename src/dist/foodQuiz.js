@@ -27,16 +27,98 @@ const quizData = {
         image: "images/neighbor_door.png",
         choices: {
             "Drop everything to help them out": {
-                nextState: 6,
+                nextState: 101,
                 scores: { noodleSoup: 2, napaCabbage: 1, sukiyaki: 1 }
             },
             "Politely explain you need some alone time but offer to help later": {
-                nextState: 7,
+                nextState: 102,
                 scores: { onigiri: 2, tonkatsu: 1, napaCabbage: 1 }
             },
             "Invite them in and turn your quiet day into a social one": {
-                nextState: 3,
+                nextState: 103,
                 scores: { frenchFries: 2, sukiyaki: 1, bokChoy: 1 }
+            }
+        }
+    },
+    "101": {
+        text: "After helping your neighbor, they're so grateful they invite you to join them for dinner. You:",
+        image: "images/dinner_invite.png",
+        choices: {
+            "Accept gratefully - it's nice to connect": {
+                nextState: 104,
+                scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 }
+            },
+            "Politely decline - you still want some alone time": {
+                nextState: 105,
+                scores: { onigiri: 2, tonkatsu: 1, napaCabbage: 1 }
+            }
+        }
+    },
+    "102": {
+        text: "Back to your quiet time! How do you spend the rest of your day?",
+        image: "images/quiet_time.png",
+        choices: {
+            "Cooking something special just for yourself": {
+                nextState: 106,
+                scores: { tonkatsu: 2, noodleSoup: 1, onigiri: 1 }
+            },
+            "Getting lost in a book or favorite show": {
+                nextState: 107,
+                scores: { onigiri: 2, napaCabbage: 1, noodleSoup: 1 }
+            },
+            "Working on a creative project": {
+                nextState: 108,
+                scores: { bokChoy: 2, frenchFries: 1, tonkatsu: 1 }
+            }
+        }
+    },
+    "103": {
+        text: "Your impromptu gathering is going well! What kind of host are you?",
+        image: "images/gathering.png",
+        choices: {
+            "Making sure your neighbor feels comfortable": {
+                nextState: 109,
+                scores: { noodleSoup: 2, napaCabbage: 1, sukiyaki: 1 }
+            },
+            "Keeping the conversation flowing with interesting topics": {
+                nextState: 110,
+                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
+            }
+        }
+    },
+    "104": {
+        text: "At your neighbor's dinner, you discover they're an amazing cook! What do you appreciate most about the meal?",
+        image: "images/dinner_table.png",
+        choices: {
+            "The thoughtful presentation and attention to detail": {
+                nextState: 111,
+                scores: { tonkatsu: 2, napaCabbage: 1, onigiri: 1 }
+            },
+            "The bold, unique flavors they've created": {
+                nextState: 111,
+                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
+            },
+            "The warm, comforting feeling of sharing food together": {
+                nextState: 111,
+                scores: { noodleSoup: 2, sukiyaki: 1, napaCabbage: 1 }
+            }
+        }
+    },
+    "111": {
+        text: "Your neighbor asks about your favorite foods. What do you tell them you enjoy most?",
+        image: "images/food_conversation.png",
+        choices: {
+            "Simple, comforting classics that remind you of home": {
+                nextState: 112,
+                scores: { onigiri: 2, noodleSoup: 1, tonkatsu: 1 }
+            },
+            "Adventurous dishes with unexpected flavor combinations": {
+                nextState: 112,
+                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
+            },
+            "Shareable food that brings people together": {
+                nextState: 112,
+                scores: { sukiyaki: 2, frenchFries: 1, napaCabbage: 1 }
             }
         }
     },
@@ -45,16 +127,30 @@ const quizData = {
         image: "images/gathering.png",
         choices: {
             "Making sure everyone has food and drinks": {
-                nextState: 8,
+                nextState: 201,
                 scores: { noodleSoup: 2, sukiyaki: 1, napaCabbage: 1 }
             },
             "Keeping everyone entertained with games and jokes": {
-                nextState: 9,
+                nextState: 202,
                 scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
             },
             "Creating thoughtful conversations between guests": {
-                nextState: 10,
+                nextState: 203,
                 scores: { tonkatsu: 2, onigiri: 1, napaCabbage: 1 }
+            }
+        }
+    },
+    "201": {
+        text: "Oh no! One of your guests accidentally spills their drink. How do you react?",
+        image: "images/spill.png",
+        choices: {
+            "Immediately help clean up with a reassuring smile": {
+                nextState: 204,
+                scores: { noodleSoup: 2, napaCabbage: 1, sukiyaki: 1 }
+            },
+            "Make a joke to ease their embarrassment": {
+                nextState: 204,
+                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
             }
         }
     },
@@ -63,16 +159,34 @@ const quizData = {
         image: "images/hidden_path.png",
         choices: {
             "Follow it eagerly to see where it leads": {
-                nextState: 11,
+                nextState: 301,
                 scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
             },
             "Take a quick look but stick to the main trail": {
-                nextState: 12,
+                nextState: 302,
                 scores: { tonkatsu: 2, onigiri: 1, napaCabbage: 1 }
             },
             "Take a photo and share this discovery with friends later": {
-                nextState: 13,
+                nextState: 303,
                 scores: { sukiyaki: 2, frenchFries: 1, bokChoy: 1 }
+            }
+        }
+    },
+    "301": {
+        text: "The hidden path leads to a magical food forest! You find yourself surrounded by incredible edible plants and trees. What do you do?",
+        image: "images/food_forest.png",
+        choices: {
+            "Explore every inch of this amazing place": {
+                nextState: 304,
+                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
+            },
+            "Find a peaceful spot to sit and enjoy the atmosphere": {
+                nextState: 304,
+                scores: { onigiri: 2, noodleSoup: 1, napaCabbage: 1 }
+            },
+            "Gather some unique foods to share with friends later": {
+                nextState: 304,
+                scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 }
             }
         }
     },
@@ -81,192 +195,20 @@ const quizData = {
         image: "images/keepsake.png",
         choices: {
             "Take a break to reminisce about the past": {
-                nextState: 14,
+                nextState: 401,
                 scores: { noodleSoup: 2, onigiri: 1, tonkatsu: 1 }
             },
             "Find a special place to display it": {
-                nextState: 15,
+                nextState: 402,
                 scores: { napaCabbage: 2, tonkatsu: 1, noodleSoup: 1 }
             },
             "Message a friend about the memory": {
-                nextState: 16,
+                nextState: 403,
                 scores: { sukiyaki: 2, frenchFries: 1, bokChoy: 1 }
             }
         }
     },
-    "6": {
-        text: "After helping your neighbor, they're so grateful they invite you to join them for dinner. You:",
-        image: "images/dinner_invite.png",
-        choices: {
-            "Accept gratefully - it's nice to connect": {
-                nextState: 17,
-                scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 }
-            },
-            "Politely decline - you still want some alone time": {
-                nextState: 18,
-                scores: { onigiri: 2, tonkatsu: 1, napaCabbage: 1 }
-            }
-        }
-    },
-    "7": {
-        text: "Back to your quiet time! How do you spend the rest of your day?",
-        image: "images/quiet_time.png",
-        choices: {
-            "Cooking something special just for yourself": {
-                nextState: 19,
-                scores: { tonkatsu: 2, noodleSoup: 1, onigiri: 1 }
-            },
-            "Getting lost in a book or favorite show": {
-                nextState: 20,
-                scores: { onigiri: 2, napaCabbage: 1, noodleSoup: 1 }
-            },
-            "Working on a creative project": {
-                nextState: 21,
-                scores: { bokChoy: 2, frenchFries: 1, tonkatsu: 1 }
-            }
-        }
-    },
-    "8": {
-        text: "Oh no! One of your guests accidentally spills their drink. How do you react?",
-        image: "images/spill.png",
-        choices: {
-            "Immediately help clean up with a reassuring smile": {
-                nextState: 22,
-                scores: { noodleSoup: 2, napaCabbage: 1, sukiyaki: 1 }
-            },
-            "Make a joke to ease their embarrassment": {
-                nextState: 23,
-                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
-            }
-        }
-    },
-    "9": {
-        text: "Your party games are a hit! What's your go-to activity when hosting?",
-        image: "images/party_games.png",
-        choices: {
-            "Charades or other active games": {
-                nextState: 24,
-                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
-            },
-            "Telling funny stories and jokes": {
-                nextState: 23,
-                scores: { bokChoy: 2, frenchFries: 1, onigiri: 1 }
-            },
-            "Board games that bring everyone together": {
-                nextState: 22,
-                scores: { sukiyaki: 2, napaCabbage: 1, tonkatsu: 1 }
-            }
-        }
-    },
-    "10": {
-        text: "During a deep conversation, someone brings up a controversial topic. You:",
-        image: "images/conversation.png",
-        choices: {
-            "Listen to all sides and offer a balanced perspective": {
-                nextState: 22,
-                scores: { tonkatsu: 2, napaCabbage: 1, noodleSoup: 1 }
-            },
-            "Share your passionate opinions": {
-                nextState: 23,
-                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
-            },
-            "Gently steer the conversation to a lighter topic": {
-                nextState: 24,
-                scores: { noodleSoup: 2, onigiri: 1, napaCabbage: 1 }
-            }
-        }
-    },
-    "11": {
-        text: "The hidden path leads to a magical food forest! You find yourself surrounded by incredible edible plants and trees. What do you do?",
-        image: "images/food_forest.png",
-        choices: {
-            "Explore every inch of this amazing place": {
-                nextState: 25,
-                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
-            },
-            "Find a peaceful spot to sit and enjoy the atmosphere": {
-                nextState: 26,
-                scores: { onigiri: 2, noodleSoup: 1, napaCabbage: 1 }
-            },
-            "Gather some unique foods to share with friends later": {
-                nextState: 27,
-                scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 }
-            }
-        }
-    },
-    "12": {
-        text: "Continuing on the main trail, you meet a friendly group of hikers. They invite you to join them for the rest of their journey. Do you:",
-        image: "images/hikers.png",
-        choices: {
-            "Join them - it seems fun and safer to hike together": {
-                nextState: 27,
-                scores: { sukiyaki: 2, frenchFries: 1, bokChoy: 1 }
-            },
-            "Thank them but continue solo - you enjoy your own pace": {
-                nextState: 26,
-                scores: { onigiri: 2, tonkatsu: 1, napaCabbage: 1 }
-            }
-        }
-    },
-    "22": {
-        text: "As the evening winds down, your friends thank you for a wonderful time. What are you thinking about?",
-        image: "images/evening_end.png",
-        choices: {
-            "How happy you are that everyone enjoyed themselves": {
-                nextState: 28,
-                scores: { sukiyaki: 2, noodleSoup: 1, napaCabbage: 1 }
-            },
-            "Already planning the next gathering": {
-                nextState: 28,
-                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
-            },
-            "Looking forward to some quiet time to recharge": {
-                nextState: 28,
-                scores: { onigiri: 2, tonkatsu: 1, napaCabbage: 1 }
-            }
-        }
-    },
-    "23": {
-        text: "You've had a busy and exciting day! As evening approaches, you decide to:",
-        image: "images/evening_approach.png",
-        choices: {
-            "Continue the fun - the day's not over yet!": {
-                nextState: 28,
-                scores: { frenchFries: 2, bokChoy: 1, sukiyaki: 1 }
-            },
-            "Wind down with something relaxing": {
-                nextState: 28,
-                scores: { onigiri: 2, noodleSoup: 1, napaCabbage: 1 }
-            },
-            "Reflect on the day's events and plan for tomorrow": {
-                nextState: 28,
-                scores: { tonkatsu: 2, napaCabbage: 1, bokChoy: 1 }
-            }
-        }
-    },
-    "28": {
-        text: "As you're getting ready for bed, you think about what you're most looking forward to tomorrow:",
-        image: "images/bedtime.png",
-        choices: {
-            "New possibilities and adventures": {
-                nextState: 29,
-                scores: { bokChoy: 2, frenchFries: 1, sukiyaki: 1 }
-            },
-            "Connecting with people I care about": {
-                nextState: 29,
-                scores: { sukiyaki: 2, noodleSoup: 1, frenchFries: 1 }
-            },
-            "Some peaceful time to myself": {
-                nextState: 29,
-                scores: { onigiri: 2, napaCabbage: 1, tonkatsu: 1 }
-            },
-            "Accomplishing something meaningful": {
-                nextState: 29,
-                scores: { tonkatsu: 2, bokChoy: 1, napaCabbage: 1 }
-            }
-        }
-    },
-    "29": {
+    "112": {
         text: "Last question! If you could be any meal, you'd want to be one that:",
         image: "images/final_question.png",
         choices: {
@@ -339,6 +281,7 @@ const foodPersonalities = {
     }
 };
 let currentState = 1;
+let questionCount = 1;
 let scores = {
     onigiri: 0,
     sukiyaki: 0,
@@ -365,6 +308,7 @@ function startQuiz() {
         frenchFries: 0
     };
     currentState = 1;
+    questionCount = 1;
     renderState(currentState);
 }
 function renderState(state) {
@@ -377,7 +321,8 @@ function renderState(state) {
         return;
     }
     if (questionNumber && questionText && choicesContainer) {
-        questionNumber.style.display = 'none';
+        questionNumber.style.display = 'block';
+        questionNumber.textContent = `Question ${questionCount}/10`;
         questionText.textContent = questionData.text;
         choicesContainer.innerHTML = '';
         for (const [choiceText, choiceData] of Object.entries(questionData.choices)) {
@@ -406,6 +351,9 @@ function selectAnswer(choiceText, choiceData) {
         scores[food] += points;
     }
     currentState = choiceData.nextState;
+    if (currentState !== 0) {
+        questionCount++;
+    }
     if (currentState === 0) {
         showResult();
     }
