@@ -161,6 +161,13 @@
             background-position: center;
         }
 
+        .story-image {
+            width: 250px;
+            height: 200px;
+            margin: 0 auto 20px;
+            object-fit: contain;
+        }
+
         @media (max-width: 600px) {
             .container {
                 width: 95%;
@@ -196,6 +203,7 @@
         <div id="game-container" class="game-container">
             <div class="question-container">
                 <div id="question-number" class="question-number">Question 1/10</div>
+                <img id="story-image" class="story-image" src="images/homepage.png" alt="Story image">
                 <div id="question-text" class="question-text"></div>
             </div>
             <div id="choices" class="choices"></div>
@@ -210,7 +218,7 @@
         </div>
     </div>
 
-    <!-- Use the compiled JavaScript file -->
+    <!-- JavaScript file path -->
     <script src="src/dist/foodQuiz.js"></script>
 </body>
 
