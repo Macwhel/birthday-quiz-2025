@@ -4,7 +4,7 @@ A fun quiz to discover which food matches your personality!
 
 ## Try It Out
 
-You can take the quiz here: [https://macwhelE.github.io/birthday-quiz-2025](https://macwhelE.github.io/birthday-quiz-2025)
+You can take the quiz here: [https://macwhel.github.io/birthday-quiz-2025](https://macwhel.github.io/birthday-quiz-2025)
 
 ## About
 
