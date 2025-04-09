@@ -1,0 +1,19 @@
+# Dependencies
+/node_modules
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Build output
+# Keep the dist folder for GitHub Pages
+# /js/dist
+
+# OS files
+.DS_Store
+Thumbs.db

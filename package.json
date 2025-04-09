@@ -1,0 +1,27 @@
+{
+  "name": "food-personality-quiz",
+  "version": "1.0.0",
+  "description": "A fun quiz to discover which food matches your personality!",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d ."
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "gh-pages": "^6.1.0"
+  },
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Macwhel/happy-birthday-alisa-2025.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Macwhel/happy-birthday-alisa-2025/issues"
+  },
+  "homepage": "https://github.com/Macwhel/happy-birthday-alisa-2025#readme"
+}

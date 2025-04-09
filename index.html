@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What Food Are You?</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Comic Neue', sans-serif;
+            background: #c6f7c0;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 600px;
+            min-height: 450px;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ebffea;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        .title {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #2a7d19;
+            font-weight: bold;
+        }
+
+        .start-button {
+            font-size: 20px;
+            padding: 10px 20px;
+            border: 3px solid #4caf50;
+            border-radius: 10px;
+            background-color: #c1f4b9;
+            cursor: pointer;
+            text-decoration: none;
+            margin: 20px auto;
+            color: #2a7d19;
+            font-weight: bold;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .start-button:hover {
+            background-color: #a7e89d;
+            transform: scale(1.05);
+        }
+
+        .game-container {
+            display: none;
+            width: 100%;
+        }
+
+        .question-container {
+            margin-bottom: 20px;
+        }
+
+        .question-number {
+            font-size: 16px;
+            color: #2a7d19;
+            margin-bottom: 5px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .choices {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .choice-button {
+            font-family: 'Comic Neue', sans-serif;
+            font-size: 16px;
+            padding: 10px 15px;
+            width: 80%;
+            max-width: 400px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            background-color: #f0ffe8;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: left;
+        }
+
+        .choice-button:hover {
+            background-color: #d8f8ce;
+            transform: scale(1.02);
+        }
+
+        .result-container {
+            display: none;
+        }
+
+        .result-title {
+            font-size: 24px;
+            color: #2a7d19;
+            margin-bottom: 10px;
+        }
+
+        .result-image {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .result-description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .restart-button {
+            font-size: 18px;
+            padding: 8px 16px;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            background-color: #c1f4b9;
+            cursor: pointer;
+            color: #2a7d19;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .restart-button:hover {
+            background-color: #a7e89d;
+        }
+
+        .home-image {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto 20px;
+            background-image: url('images/homepage.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 15px;
+            }
+
+            .title {
+                font-size: 24px;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .choice-button {
+                font-size: 15px;
+                padding: 8px 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Home Screen -->
+        <div id="home-screen">
+            <div class="title">What Food Are You?</div>
+            <div class="home-image"></div>
+            <button class="start-button" onclick="startQuiz()">Start Quiz!</button>
+        </div>
+
+        <!-- Quiz Container -->
+        <div id="game-container" class="game-container">
+            <div class="question-container">
+                <div id="question-number" class="question-number">Question 1/10</div>
+                <div id="question-text" class="question-text"></div>
+            </div>
+            <div id="choices" class="choices"></div>
+        </div>
+
+        <!-- Result Container -->
+        <div id="result-container" class="result-container">
+            <div id="result-title" class="result-title">You are a...</div>
+            <div id="result-image" class="result-image"></div>
+            <div id="result-description" class="result-description"></div>
+            <button class="restart-button" onclick="restartQuiz()">Take Again</button>
+        </div>
+    </div>
+
+    <!-- Use the compiled JavaScript file -->
+    <script src="js/dist/foodQuiz.js"></script>
+</body>
+
+</html>
